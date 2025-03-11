@@ -18,12 +18,12 @@ def download():
         print(f"Získaná URL: {url}")  
 
         ydl_opts = {
-    'outtmpl': f"{DOWNLOAD_FOLDER}/%(title)s.%(ext)s",  # Název souboru podle videa
-    'format': 'bv+ba/b',  # Nejlepší video + nejlepší audio
-    'merge_output_format': 'mp4',  # Sloučení do MP4
+    'outtmpl': f"{DOWNLOAD_FOLDER}/%(title)s.%(ext)s", 
+    'format': 'bv+ba/b',
+    'merge_output_format': 'mp4',  
     'postprocessors': [{
         'key': 'FFmpegVideoConvertor',
-        'preferedformat': 'mp4',  # Převod do MP4
+        'preferedformat': 'mp4', 
     }]
 }
 
